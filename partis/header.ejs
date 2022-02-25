@@ -1,0 +1,66 @@
+ <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="/images/logo.png">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <div class=" text-left">
+                                <form action="/products/search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search for products" name="q">
+                                        <div class="input-group-append">
+                                            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Men's</a></li>
+                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="/products">Products</a></li>
+                                    <li><a href="/products">Single Product</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">categories</a>
+                                <ul>
+                                  
+
+
+                                    <% if (categories !=null) { %>
+                                        <% for(let category of categories){ %>
+                                            <li>  <a class="nav-item nav-link" href="/products/category/<%= category %>">
+                                                <%= category %>
+                                            </a></li>
+                                            <% } %>
+                                                <% } %>
+                                </ul>
+                            </li>
+                           
+                        </ul> 
+                            </li>
+                           
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
